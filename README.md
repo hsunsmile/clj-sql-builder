@@ -1,6 +1,10 @@
 # SQL query builder for clojure [![Build Status](https://travis-ci.org/hsunsmile/clj-sql-builder.svg?branch=master)](https://travis-ci.org/hsunsmile/clj-sql-builder)
 
 A very simple SQL statement builder based on `jsqlparser`
+## Dependencies
+- [Build tooling for Clojure: boot-clj](http://boot-clj.com/)
+ - [How to install boot](https://github.com/boot-clj/boot#install) 
+- [JSqlParser: A SQL statement parser](https://github.com/JSQLParser/JSqlParser)
 
 ## Getting Started
 1. Start REPL
