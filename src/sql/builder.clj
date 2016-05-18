@@ -2,6 +2,7 @@
   (:require [boot.core :as core]
             [boot.task.built-in :as task]
             [clojure.java.io :as io]
+            [clojure.string :as cstr]
             [clojure.tools.logging :as log])
   (:import [net.sf.jsqlparser.util SelectUtils TablesNamesFinder]
            [net.sf.jsqlparser.schema Table Column]
@@ -20,7 +21,8 @@
 (defn add-where
   "Add WHERE clause to a SQL query"
   [query where-clause]
-  (let [prefix "select * from t "
+  (let [prefix "select * from t where "
+        where-clause (cstr/replace where-clause #"where" "")
         where-part (-> (CCJSqlParserUtil/parse (str prefix where-clause))
                        (.getSelectBody)
                        (.getWhere))]
