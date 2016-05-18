@@ -7,6 +7,20 @@ A very simple SQL statement builder based on `jsqlparser`
 - [JSqlParser: A SQL statement parser](https://github.com/JSQLParser/JSqlParser)
 
 ## Getting Started
+### Syntax checker
+1. Adding `clj-sql-builder` as dependency and refer to the parser task
+ ```
+ (set-env!
+   :dependencies '[[clj-sql-builder "0.0.2"]])
+
+ (require '[sql.parser :refer :all])
+ ```
+2. Run the checker
+ ```
+ boot parse-directory -d .
+ ```
+ 
+### SQL statement builder
 1. Start REPL
 
  ```
