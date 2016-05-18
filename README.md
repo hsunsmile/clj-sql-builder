@@ -1,4 +1,4 @@
-# SQL query builder for clojure [![Build Status](https://travis-ci.org/hsunsmile/clj-sql-builder.svg?branch=master)](https://travis-ci.org/hsunsmile/clj-sql-builder)
+# SQL query builder for clojure [![Build Status](https://travis-ci.org/hsunsmile/clj-sql-builder.svg?branch=master)](https://travis-ci.org/hsunsmile/clj-sql-builder) [![Clojars Project](https://img.shields.io/clojars/v/clj-sql-builder.svg)](https://clojars.org/clj-sql-builder)
 
 A very simple SQL statement builder based on `jsqlparser`
 ## Dependencies
