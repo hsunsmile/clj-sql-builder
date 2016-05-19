@@ -1,4 +1,14 @@
 language: java
-install:
- - curl -fsSLo boot https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && chmod 755 boot
-script: ./scripts/ci-travis.sh
+
+cache:
+  directories:
+    - $HOME/.bin
+    - $HOME/.m2
+
+env:
+  global:
+    - BOOT_EMIT_TARGET=no
+    - BOOT_VERSION=2.5.5
+
+install: ./scripts/install-deps.sh
+script:  ./scripts/ci-travis.sh
